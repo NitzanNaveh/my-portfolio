@@ -1,0 +1,70 @@
+import { EmailTemplate } from "@/components/email-template";
+import { config } from "@/data/config";
+import { Resend } from "resend";
+import { z } from "zod";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const Email = z.object({
+  fullName: z.string().min(2, "Full name is invalid!"),
+  email: z.string().email({ message: "Email is invalid!" }),
+  message: z.string().min(10, "Message is too short!"),
+});
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    console.log(body);
+    const {
+      success: zodSuccess,
+      data: zodData,
+      error: zodError,
+    } = Email.safeParse(body);
+    if (!zodSuccess)
+      return Response.json({ error: zodError?.message }, { status: 400 });
+
+    // Check if Resend API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.log("Resend API key not configured. Logging email data instead:");
+      console.log({
+        from: "Portfolio Contact Form",
+        to: config.email,
+        subject: "Contact me from portfolio",
+        fullName: zodData.fullName,
+        email: zodData.email,
+        message: zodData.message,
+      });
+      
+      // Return success for development/testing
+      return Response.json({ 
+        message: "Email logged successfully (Resend not configured)",
+        data: {
+          fullName: zodData.fullName,
+          email: zodData.email,
+          message: zodData.message,
+        }
+      });
+    }
+
+    const { data: resendData, error: resendError } = await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: [config.email],
+      subject: "Contact me from portfolio",
+      react: EmailTemplate({
+        fullName: zodData.fullName,
+        email: zodData.email,
+        message: zodData.message,
+      }),
+    });
+
+    if (resendError) {
+      console.error("Resend error:", resendError);
+      return Response.json({ error: "Failed to send email" }, { status: 500 });
+    }
+
+    return Response.json(resendData);
+  } catch (error) {
+    console.error("API error:", error);
+    return Response.json({ error: "Internal server error" }, { status: 500 });
+  }
+}

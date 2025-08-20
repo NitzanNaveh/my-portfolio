@@ -91,9 +91,6 @@ http://localhost:3000
 Deployed with Vercel for performance and simplicity.
 👉 Live site: www.nitzannaveh.com
 
-💖 Acknowledgments
-Thanks to Naresh Khatri for inspiring parts of this design and animation approach.
-
 📬 Contact
 Feel free to reach out for collaboration, opportunities, or feedback:
 
@@ -101,4 +98,4 @@ Email: nitzanav80@gmail.com
 
 LinkedIn: linkedin.com/in/nitzannaveh
 
-GitHub: github.com/NitzanNaveh# my-portfolio
+GitHub: github.com/NitzanNaveh
