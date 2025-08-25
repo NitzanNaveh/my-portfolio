@@ -11,8 +11,6 @@ This project brings together creativity, technology, and my passion for showcasi
 
 [Watch preview video](https://github.com/NitzanNaveh/3D-interactive-portfolio/blob/main/preview_video.mp4)
 
-This project was **inspired** by the amazing work of [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio). His creative approach to web design has been a huge influence. 🙏  
-
 ---
 
 ## 🔥 Features
