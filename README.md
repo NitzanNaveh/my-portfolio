@@ -1,5 +1,3 @@
-![Portfolio Preview][(https://github.com/NitzanNaveh/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)](https://my-portfolio-nitzan.vercel.app/#projects)
-
 # 🚀 My Portfolio Website
 
 Welcome to the repository for my personal portfolio website! 🎉  
