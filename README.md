@@ -3,11 +3,9 @@
 Welcome to the repository for my personal portfolio website! 🎉  
 This project brings together creativity, technology, and my passion for showcasing my skills, projects, and personality in an interactive and visually engaging way.  
 
-### 🌐 Live preview: [(https://www.nitzannaveh.com)](https://my-portfolio-nitzan.vercel.app/#projects)
+### 🌐 Live preview: [(https://www.nitzannaveh.com)][(https://my-portfolio-nitzan.vercel.app/#projects)](https://my-portfolio-nitzan.vercel.app/)
 
 ![Preview](https://github.com/NitzanNaveh/3D-interactive-portfolio/blob/main/public/assets/preview_video.gif?raw=true)
-
-[Watch preview video](https://github.com/NitzanNaveh/3D-interactive-portfolio/blob/main/preview_video.mp4)
 
 ---
 
