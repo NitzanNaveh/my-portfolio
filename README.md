@@ -1,4 +1,4 @@
-![Portfolio Preview](https://github.com/NitzanNaveh/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)
+![Portfolio Preview][(https://github.com/NitzanNaveh/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)](https://my-portfolio-nitzan.vercel.app/#projects)
 
 # 🚀 My Portfolio Website
 
